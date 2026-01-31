@@ -13,7 +13,13 @@ const app = express();
 
 const allowedOrigins = process.env.FRONTEND_URL
   ? process.env.FRONTEND_URL.split(',').map((o) => o.trim())
-  : ['http://localhost:3000'];
+  : const allowedOrigins = process.env.FRONTEND_URL
+  ? process.env.FRONTEND_URL.split(',').map(o => o.trim())
+  : [
+      'http://localhost:3000',
+      'https://taskapp-frontend-new.onrender.com'
+    ];
+;
 
 app.use(
   cors({
