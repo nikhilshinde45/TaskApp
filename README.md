@@ -225,10 +225,6 @@ npm run build
 
 ---
 
-## Quality Notes
 
-- **Backend:** MVC separation, centralized error handler, auth middleware, and Mongoose validation.
-- **Frontend:** Component-based structure, protected/public routes, loading and error handling, responsive layout.
-- **Security:** Passwords hashed with bcrypt; JWT for stateless auth; users can only access their own tasks (filtered by `req.user.id`).
 
 
